@@ -14,15 +14,23 @@ class AlgorithmController: UIAlgorithmController
     
     @IBOutlet weak var AlgorithmLabel: UILabel!
     
-    override func viewDidLoad()
+    public override func viewDidLoad() -> Void
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        formatAlgoritm()
     }
 
-    override func didReceiveMemoryWarning()
+    private func formatAlgorithm() -> Void
     {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let title : String = "Making an IOS App"
+        
+        let stepOne : String = "Hit Create New XCode Project"
+        let stepTwo : String = "Choose Single View App"
+        let stepThree : String = "Name the project"
+        let stepFour : String = "Put the project in your folder used for Swift projects"
+        let stepFive : String = "Put AppDelegate, Assets, and Info.plist in a folder together; put Main.storyboard and LaunchScreen in a folder together; put ViewController in a folder; and add a new Swift file, which will be put in its own folder"
+        let stepSix : String = "Go to the project screen on the left, and click the choose info.plist button at the top, then choose the info.plist"
+        let stepSeven : String = "Save (command + S), Build (command + B), and Run (command + R)"
     }
 }
