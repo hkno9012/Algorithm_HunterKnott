@@ -8,18 +8,21 @@
 
 import UIKit
 
-class AlgorithmController: UIViewController {
-
-    override func viewDidLoad() {
+class AlgorithmController: UIAlgorithmController
+{
+    @IBOutlet weak var AlgorithmImage: UIImageView!
+    
+    @IBOutlet weak var AlgorithmLabel: UILabel!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-
