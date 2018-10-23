@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlgorithmController: UIAlgorithmController
+class AlgorithmController: UIViewController//Keep this as UIViewController, don't change it to AlgorthmController
 {
     @IBOutlet weak var AlgorithmImage: UIImageView!
     
@@ -18,10 +18,10 @@ class AlgorithmController: UIAlgorithmController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        formatAlgoritm()
+        formatAlgorithm()
     }
 
-    private func formatAlgorithm() -> Void
+    private func formatAlgorithm() -> Void//This method makes a bullet-pointed list with all these instructions in it
     {
         let title : String = "Making an IOS App"
         
@@ -35,14 +35,14 @@ class AlgorithmController: UIAlgorithmController
         
         let algorithm = [stepOne, stepTwo, stepThree, stepFour, stepFive, stepSix, stepSeven]//Like an arraylisyt
         
-        let attributesDictionary = [NSAttributedStringKey.font : algorithmText.font]
-        let fullAttributedString = NSMutableAttributeString(string: title, attributes: attributesDictionary)
+        let attributesDictionary = [NSAttributedStringKey.font : AlgorithmLabel.font]//AlgorithmLabel comes from the label's @IBOutlet
+        let fullAttributedString = NSMutableAttributedString(string: title, attributes: attributesDictionary)
         
-        for step in algorithm
+        for step in algorithm//For simple loops in Swift, () are not required. In is used here instead
         {
             let bullet : String = "🌞"
-            let formattedStep : String = "\n\(bullet) \(step)"
-            let attributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string : formattedStep)
+            let formattedStep : String = "\n\(bullet) \(step)"//This is called concatination, meaning that stings are squished together
+            let attributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string : formattedStep)//AttributedString and NSMutableAttributedString help to put strings into the GUI
             let outlineStyle = createOutlineStyle()
             
             attributedStringStep.addAttributes([NSAttributedStringKey.paragraphStyle : outlineStyle], range : NSMakeRange(0, attributedStringStep.length))
@@ -50,7 +50,7 @@ class AlgorithmController: UIAlgorithmController
             fullAttributedString.append(attributedStringStep)
         }
         
-        algorithmText.attributedText = fullAttributedString
+        AlgorithmLabel.attributedText = fullAttributedString
     }
     
     private func createOutlineStyle() -> NSParagraphStyle
