@@ -33,4 +33,16 @@ class AlgorithmController: UIAlgorithmController
         let stepSix : String = "Go to the project screen on the left, and click the choose info.plist button at the top, then choose the info.plist"
         let stepSeven : String = "Save (command + S), Build (command + B), and Run (command + R)"
     }
+    
+    private func createOutlineStyle() -> NSParagraphStyle
+    {
+        let outlineStyle : NSMutableParagraphStyle = NSMutableParagraphStyle()
+        
+        outlineStyle.alignment = .left
+        outlineStyle.defaultTabInterval = 15
+        outlineStyle.firstLineHeadIndent = 20
+        outlineStyle.headIndent = 35
+        
+        return outlineStyle
+    }
 }
