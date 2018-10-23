@@ -50,7 +50,7 @@ class AlgorithmController: UIViewController//Keep this as UIViewController, don'
             fullAttributedString.append(attributedStringStep)
         }
         
-        AlgorithmLabel.attributedText = fullAttributedString
+        AlgorithmLabel.attributedText = fullAttributedString//Go to the Algorithm label in the storyboard, then make it's attributes the same as what's in your notes for Oct. 23
     }
     
     private func createOutlineStyle() -> NSParagraphStyle
