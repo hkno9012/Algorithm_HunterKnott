@@ -35,7 +35,7 @@ class AlgorithmController: UIViewController//Keep this as UIViewController, don'
         
         let algorithm = [stepOne, stepTwo, stepThree, stepFour, stepFive, stepSix, stepSeven]//Like an arraylisyt
         
-        let attributesDictionary = [NSAttributedStringKey.font : AlgorithmLabel.font]//AlgorithmLabel comes from the label's @IBOutlet
+        let attributesDictionary = [NSAttributedString.Key.font : AlgorithmLabel.font]//AlgorithmLabel comes from the label's @IBOutlet
         let fullAttributedString = NSMutableAttributedString(string: title, attributes: attributesDictionary)
         
         for step in algorithm//For simple loops in Swift, () are not required. In is used here instead
@@ -45,7 +45,7 @@ class AlgorithmController: UIViewController//Keep this as UIViewController, don'
             let attributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string : formattedStep)//AttributedString and NSMutableAttributedString help to put strings into the GUI
             let outlineStyle = createOutlineStyle()
             
-            attributedStringStep.addAttributes([NSAttributedStringKey.paragraphStyle : outlineStyle], range : NSMakeRange(0, attributedStringStep.length))
+            attributedStringStep.addAttributes([NSAttributedString.Key.paragraphStyle : outlineStyle], range : NSMakeRange(0, attributedStringStep.length))
             
             fullAttributedString.append(attributedStringStep)
         }
